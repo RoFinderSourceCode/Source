@@ -1,0 +1,12 @@
+{
+
+  "name": "RoFinder (Find Roblox Users)",
+  "manifest_version": 3,
+  "version": "1",
+  "description": "Search any Roblox game server for a username and track their server",
+  "permissions": ["scripting"],
+  "background": {"service_worker": "background.js"},
+  "host_permissions": ["https://*.roblox.com/*"],
+  "content_scripts": [{"matches": ["*://*.roblox.com/*"],"css": ["styles.css"]}],
+  "web_accessible_resources": [{"resources": ["images/*.png", "styles.css", "script.js", "searchpanel.js"],"matches": ["https://*.roblox.com/*"]}]
+}
